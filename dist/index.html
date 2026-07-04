@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Your Name — Backend Engineer</title>
+    <meta name="description" content="Backend engineer working across .NET, Azure and React. Projects, writing and resume." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script type="module" crossorigin src="/assets/index-cuLYjxV9.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-lkuNR2mn.css">
+  </head>
+  <body>
+    <div id="root"></div>
+
+    <!--
+      Netlify scans the built static HTML for forms at deploy time, but this
+      site's real form only exists after React renders it — so it needs a
+      hidden static twin here for Netlify to detect the "contact" form.
+      See: https://docs.netlify.com/forms/setup/#javascript-rendered-forms
+    -->
+    <form name="contact" data-netlify="true" hidden>
+      <input type="text" name="name" />
+      <input type="email" name="email" />
+      <textarea name="message"></textarea>
+    </form>
+
+  </body>
+</html>

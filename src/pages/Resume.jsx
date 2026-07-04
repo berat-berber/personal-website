@@ -1,6 +1,8 @@
+import { useEffect } from "react"
 import { site } from "../data/site"
 
 export default function Resume() {
+  useEffect(() => { document.title = "berat berber — resume" }, [])
   return (
     <div className="shell">
       <section className="hero" style={{ borderTop: "none" }}>

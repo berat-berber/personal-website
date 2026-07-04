@@ -1,13 +1,13 @@
+import { useEffect } from "react"
 import { Link } from "react-router-dom"
 import { site } from "../data/site"
 import { projects } from "../data/projects"
-import { getAllPosts } from "../lib/posts"
 import StatusBar from "../components/StatusBar"
 import ReleaseCard from "../components/ReleaseCard"
 
 export default function Home() {
+  useEffect(() => { document.title = "berat berber" }, [])
   const recentProjects = projects.slice(0, 2)
-  const recentPosts = getAllPosts().slice(0, 2)
 
   return (
     <div className="shell">
@@ -30,18 +30,7 @@ export default function Home() {
         ))}
       </section>
 
-      <section>
-        <div className="section-label">latest blog entries</div>
-        {recentPosts.map((post) => (
-          <Link to={`/blog/${post.slug}`} className="log-entry" key={post.slug}>
-            <span className="log-date mono">{post.date}</span>
-            <div>
-              <h3>{post.title}</h3>
-              <p>{post.excerpt}</p>
-            </div>
-          </Link>
-        ))}
-      </section>
+
     </div>
   )
 }

@@ -1,7 +1,9 @@
+import { useEffect } from "react"
 import { projects } from "../data/projects"
 import ReleaseCard from "../components/ReleaseCard"
 
 export default function Projects() {
+  useEffect(() => { document.title = "berat berber — projects" }, [])
   return (
     <div className="shell">
       <section className="hero" style={{ borderTop: "none" }}>

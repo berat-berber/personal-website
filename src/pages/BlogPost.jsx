@@ -1,3 +1,4 @@
+import { useEffect } from "react"
 import { useParams, Link } from "react-router-dom"
 import ReactMarkdown from "react-markdown"
 import remarkGfm from "remark-gfm"
@@ -6,6 +7,10 @@ import { getPostBySlug } from "../lib/posts"
 export default function BlogPost() {
   const { slug } = useParams()
   const post = getPostBySlug(slug)
+
+  useEffect(() => {
+    document.title = post ? `berat berber — ${post.title}` : "berat berber — not found"
+  }, [post])
 
   if (!post) {
     return (
